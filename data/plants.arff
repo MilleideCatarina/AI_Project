@@ -1,0 +1,74 @@
+%	1. Boolean attributes changed from 1 and 0 to Enumerated attribute with
+%          values {true and false}
+%       2. Class Number (Attribute 10) changed to an Enumerated type with
+%	   values {1,2,3,4} 
+%
+%
+% 1. Title: Plant database
+% 
+% 2. Source Information
+%    -- Project AI class
+%    -- Date: 2021
+%  
+%
+% 
+% 4. Relevant Information:
+%    -- 8 Boolean-valued attributes.  The "type"
+%       attribute appears to be the class attribute.  
+% 
+%       Class# Set of animals:
+%       ====== ===============================================================
+%            1 (3) mosses, anthocerans, liverworts
+%            2 (2) ferns, salvinia
+%            3 (2)  pine, araucaria
+%            4 (4) orchids, mango, avocado, ipe
+%        
+% 
+% 5. Number of Instances: 11
+% 6. Number of Attributes: 10 (plant name, 8 Boolean attributes, 1 numeric)
+% 7. Attribute Information: (name of attribute and type of value domain)
+%    1. plant name:	        Unique for each instance
+%    2. vascular	        Boolean
+%    3. stalk    	        Boolean
+%    4. sheet 		        Boolean
+%    5. true_root	        Boolean
+%    6. flowers 	        Boolean
+%    7. seeds   	        Boolean
+%    8. fruits  	        Boolean
+%    9. water for reproduction	Boolean
+%   10. type                    Numeric (integer values in range [1,4])
+% 
+% 8. Missing Attribute Values: None
+% 9. Class Distribution: Given above
+   
+@RELATION plants
+
+@ATTRIBUTE plant {mosses, anthocerans, liverworts, ferns, salvinia, pine, araucaria, orchids, mango, avocado, ipe}
+@ATTRIBUTE vascular {false, true}
+@ATTRIBUTE stalk {false, true}
+@ATTRIBUTE sheet {false, true}
+@ATTRIBUTE true_root {false, true}
+@ATTRIBUTE flowers {false, true}
+@ATTRIBUTE seeds {false, true}
+@ATTRIBUTE fruits {false, true}
+@ATTRIBUTE water_for_reproduction {false, true}
+@ATTRIBUTE type { briófitas, pteridófitas, gimnospermas, angiospermas }
+
+@DATA
+%
+% Instances (11):
+%
+mosses, false, false, false, false, false, false, false, true,briófitas 
+anthocerans, false, false, false, false, false, false, false, true,briófitas 
+liverworts,false, false, false, false, false, false, false, true,briófitas 
+ferns, true, true, true, true, false, false, false, true, pteridófitas
+salvinia, true, true, true, true, false, false, false, true, pteridófitas
+pine,true, true, true, true, false, true, false, false, gimnospermas
+araucaria, true, true, true, true, false, true, false, false, gimnospermas
+orchids, true, true, true, true, true, true, true, false, angiospermas
+mango, true, true, true, true, true, true, true, false, angiospermas
+avocado, true, true, true, true, true, true, true, false, angiospermas
+ipe, true, true, true, true, true, true, true, false, angiospermas
+%
+%
+%
